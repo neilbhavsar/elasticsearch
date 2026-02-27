@@ -173,7 +173,6 @@ public class DockerTests extends PackagingTestCase {
         assertThat(unauthStatusCode, equalTo(200));
     }
 
-
     /**
      * Checks that dotted env vars are respected
      */
@@ -187,7 +186,6 @@ public class DockerTests extends PackagingTestCase {
         Result result = sh.run("env | grep discovery");
         assertThat(result.stdout(), containsString("discovery.seed_hosts=host1"));
     }
-
 
     /**
      * Checks that no plugins are initially active.
